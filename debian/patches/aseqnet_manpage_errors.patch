@@ -1,0 +1,12 @@
+# Author: Jordi Mallach
+# Contact: jordi@debian.org
+# Description: Remove an unknown "LO" section from the manpage to avoid
+#              man errors.
+--- alsa-utils-1.0.19/seq/aseqnet/aseqnet.1	2009-01-19 12:17:19.000000000 +0100
++++ alsa-utils-1.0.19/seq/aseqnet/aseqnet.1	2009-03-30 02:07:31.000000000 +0200
+@@ -1,5 +1,4 @@
+ .TH aseqnet 1 "January 1, 2000"
+-.LO 1
+ .SH NAME
+ aseqnet \- ALSA sequencer connectors over network
+ 
