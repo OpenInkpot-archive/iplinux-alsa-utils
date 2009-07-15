@@ -2,9 +2,9 @@ Source: alsa-utils
 Section: core
 Priority: optional
 Maintainer: Yauhen Kharuzhy <jekhor@gmail.com>
-Build-Depends: debhelper (>=7), libncurses5-dev, autotools-dev, quilt (>= 0.40),
-XCS-Cross-Build-Depends: libncurses5-dev
-XCS-Cross-Host-Build-Depends: debhelper (>=7), autotools-dev, quilt (>= 0.40), libasound2-dev (>= 1.0.18)
+Build-Depends: debhelper (>=7), libncurses5-dev, autotools-dev, quilt (>= 0.40), libasound2-dev (>= 1.0.18)
+XCS-Cross-Build-Depends: libncurses5-dev, libasound2-dev (>= 1.0.18)
+XCS-Cross-Host-Build-Depends: debhelper (>=7), autotools-dev, quilt (>= 0.40)
 Standards-Version: 3.8.2
 Homepage: http://www.alsa-project.org/
 Vcs-Svn: svn://svn.debian.org/pkg-alsa/trunk/alsa-utils
