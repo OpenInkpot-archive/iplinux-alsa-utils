@@ -1,10 +1,10 @@
 Source: alsa-utils
-Section: sound
+Section: core
 Priority: optional
-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
-Uploaders: Jordi Mallach <jordi@debian.org>, Elimar Riesebieter <riesebie@lxtec.de>, Martin Pitt <mpitt@debian.org>
+Maintainer: Yauhen Kharuzhy <jekhor@gmail.com>
 Build-Depends: debhelper (>=7), libncurses5-dev, autotools-dev, quilt (>= 0.40),
- libasound2-dev (>= 1.0.18), xmlto
+XCS-Cross-Build-Depends: libncurses5-dev
+XCS-Cross-Host-Build-Depends: debhelper (>=7), autotools-dev, quilt (>= 0.40), libasound2-dev (>= 1.0.18)
 Standards-Version: 3.8.2
 Homepage: http://www.alsa-project.org/
 Vcs-Svn: svn://svn.debian.org/pkg-alsa/trunk/alsa-utils
