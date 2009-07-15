@@ -1,3 +1,9 @@
+alsa-utils (1.0.20-3.1) asimov; urgency=low
+
+  * IPlinux port
+
+ -- Yauhen Kharuzhy <jekhor@gmail.com>  Wed, 15 Jul 2009 13:39:01 +0300
+
 alsa-utils (1.0.20-2) unstable; urgency=low
 
   [ Elimar Riesebieter ]
