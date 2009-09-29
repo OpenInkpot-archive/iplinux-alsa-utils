@@ -12,7 +12,7 @@ Vcs-Git: git://git.iplinux.org/alsa-utils.git
 Vcs-Browser: http://git.iplinux.org/alsa-utils.git/
 
 Package: alsa-utils
-Architecture: all
+Architecture: any
 Depends: ${shlibs:Depends}
 Description: ALSA utilities
  This package contains utilities for configuring and using ALSA, including:
@@ -24,7 +24,7 @@ Description: ALSA utilities
  ALSA is the Advanced Linux Sound Architecture.
 
 Package: alsa-utils-midi
-Architecture: all
+Architecture: any
 Depends: ${shlibs:Depends}
 Description: ALSA utilities -- MIDI
  This package contains utilities for using MIDI in ALSA, including:
@@ -35,7 +35,7 @@ Description: ALSA utilities -- MIDI
  ALSA is the Advanced Linux Sound Architecture.
 
 Package: alsa-utils-speaker-test
-Architecture: all
+Architecture: any
 Depends: ${shlibs:Depends}
 Description: ALSA utilities -- speaker-test
  This package contains speaker-test utility for ALSA, providing ability to test
