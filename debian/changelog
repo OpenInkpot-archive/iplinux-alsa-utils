@@ -1,3 +1,13 @@
+alsa-utils (1.0.20-4) asimov; urgency=low
+
+  * Unused initscript and udev rules are removed.
+  * Package split to three:
+    - alsa-utils, containing basic utilities,
+    - alsa-utils-midi, containing utilities related to MIDI playback/capture
+    - alsa-utils-speaker-test, containing speaker-test(1) and data files
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Wed, 30 Sep 2009 03:49:23 +0700
+
 alsa-utils (1.0.20-3.1) asimov; urgency=low
 
   * IPlinux port
