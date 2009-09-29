@@ -1,0 +1,7 @@
+usr/bin/alsamixer
+usr/bin/amixer
+usr/bin/aplay
+usr/bin/iecset
+usr/sbin/alsactl
+usr/share/alsa/init
+

@@ -1,0 +1,6 @@
+usr/bin/aconnect
+usr/bin/amidi
+usr/bin/aplaymidi
+usr/bin/arecordmidi
+usr/bin/aseqdump
+usr/bin/aseqnet

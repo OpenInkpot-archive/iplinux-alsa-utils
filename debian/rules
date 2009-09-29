@@ -4,8 +4,6 @@ include /usr/share/quilt/quilt.make
 
 CFLAGS = -Wall -g
 
-INSTALL_UAG := -o root -g audio
-
 # These are used for cross-compiling and for saving the configure script
 # from having to guess our platform (since we know it already)
 DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
@@ -22,7 +20,6 @@ clean: unpatch
 	dh_clean
 	[ ! -f Makefile ] || $(MAKE) distclean
 	-rm -f version
-	-rm -f configure-stamp build-stamp
 	-rm -f config.cache config.log config.status Makefile.conf
 	-rm -f config.sub config.guess
 	-rm -f aplay/arecord
@@ -51,43 +48,21 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/alsa-utils
-	rm -f debian/alsa-utils/usr/share/man/fr/man8/alsaconf.8
-	rmdir debian/alsa-utils/usr/share/man/fr/man8
-	rmdir debian/alsa-utils/usr/share/man/fr
-
-	# Don't install alsaconf
-	rm -f debian/alsa-utils/usr/sbin/alsaconf
-	rm -f debian/alsa-utils/usr/share/man/man8/alsaconf*
-	rm -f debian/alsa-utils/usr/share/locale/*/LC_MESSAGES/alsaconf*
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
 
 binary-indep:
 binary-arch: build install
 	dh_testdir
 	dh_testroot
 	dh_installdirs
-	install $(INSTALL_UAG) -m644 debian/udev.rules \
-		debian/alsa-utils/lib/udev/rules.d/80-alsa.rules
-	install $(INSTALL_UAG) -m755 debian/udev.script \
-		debian/alsa-utils/lib/udev/alsa-utils
+	dh_install
 	dh_link
-#	DH_OPTIONS= dh_installinit --no-start -- start 50 S . stop 50 0 6 .
-#	dh_installdocs
-#	dh_installman
-#	cp debian/PATCHES.Debian \
-#		debian/alsa-utils/usr/share/doc/alsa-utils/
-#	cp alsamixer/README \
-#		debian/alsa-utils/usr/share/doc/alsa-utils/README.alsamixer
-#	dh_installchangelogs debian/changelog.ALSA
-#	dh_installmenu
 	dh_strip
 	dh_compress
 	dh_fixperms
-	dh_makeshlibs
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
-	dh_md5sums
 	dh_builddeb
 
 binary:	binary-indep binary-arch
