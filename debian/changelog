@@ -1,3 +1,9 @@
+alsa-utils (1.0.20-5) asimov; urgency=low
+
+  * All packages were mistakenly marked Arch: all. Fixed.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Wed, 30 Sep 2009 04:36:15 +0700
+
 alsa-utils (1.0.20-4) asimov; urgency=low
 
   * Unused initscript and udev rules are removed.
