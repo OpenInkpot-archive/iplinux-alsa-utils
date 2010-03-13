@@ -2,7 +2,7 @@ Source: alsa-utils
 Section: core
 Priority: optional
 Maintainer: Mikhail Gusarov <dottedmag@dottedmag.net>
-Uploaders: Yauhen Kharuzhy <jekhor@gmail.com>
+Uploaders: Yauhen Kharuzhy <jekhor@gmail.com>, Alexander V. Nikolaev <avn@daemon.hole.ru>
 Build-Depends: debhelper (>=7), libncurses5-dev, autotools-dev, quilt (>= 0.40), libasound2-dev (>= 1.0.18)
 XCS-Cross-Build-Depends: libncurses5-dev, libasound2-dev (>= 1.0.18)
 XCS-Cross-Host-Build-Depends: debhelper (>=7), autotools-dev, quilt (>= 0.40)
@@ -17,11 +17,17 @@ Depends: ${shlibs:Depends}
 Description: ALSA utilities
  This package contains utilities for configuring and using ALSA, including:
   o amixer: command line mixer
-  o alsamixer: curses mixer
   o aplay, arecord: command line playback and recording
   o alsactl: advanced controls for sound cards
  .
  ALSA is the Advanced Linux Sound Architecture.
+
+Package: alsa-utils-mixer
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: ALSA utilities
+ This package contains interactive mixer
+  o alsamixer: curses mixer
 
 Package: alsa-utils-midi
 Architecture: any
